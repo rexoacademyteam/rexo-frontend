@@ -6,6 +6,10 @@
     font-family: var(--font-vmtn)!important;
 }
 
+body, html {
+    background-color: #f3f4f6;
+}
+
 @layer components {
     .btn-flex {
         @apply flex justify-center items-center gap-2;
