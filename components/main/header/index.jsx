@@ -58,7 +58,7 @@ export default function Header() {
         <header className="sticky top-0 start-0 end-0 px-3 bg-gray-50 shadow-md bg-base-100 z-30 py-4">
             <div className="flex justify-between items-center align-center max-w-7xl mx-auto">
                 <div className={`flex justify-around gap-2 ${isOpen ? "block" : ""}`}>
-                    <Badge content="6">
+                    <Badge content="6" className="pt-2">
                         <IconButton color="indigo" variant="outlined" size="lg" className="btn-flex">
                             <ShoppingCartIcon className="w-7 h-7" />
                         </IconButton>

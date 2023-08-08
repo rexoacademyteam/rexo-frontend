@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export default function Login() {
     return (
-        <div className="container mx-auto max-w-4xl h-screen w-full px-2 py-4 pb-20 flex flex-col justify-start lg:justify-center items-center">
+        <div className="container mx-auto max-w-4xl h-[60%] w-full px-2 py-2 pb-20 flex flex-col justify-start lg:justify-center items-center">
             <div className="flex w-full pb-6">
                 <Link href="/">
                     <Button variant="text" color="blue-gray" className="font-fa text-base btn-flex">
