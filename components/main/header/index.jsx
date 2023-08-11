@@ -94,7 +94,6 @@ export default function Header() {
                             </Button>
                         </Link>
                     )}
-
                 </div>
 
                 <div className={`md:flex justify-around ${isOpen ? "flex" : "hidden"} w-auto`}>
