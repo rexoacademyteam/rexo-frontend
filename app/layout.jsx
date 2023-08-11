@@ -1,6 +1,8 @@
 import '@/styles/globals.css'
+import 'react-toastify/dist/ReactToastify.css'
 import Providers from '@/providers'
 import { Vazirmatn } from 'next/font/google'
+import { ToastContainer } from 'react-toastify'
 
 const vazir = Vazirmatn({ subsets: ['arabic', 'latin'], display: 'swap', variable: "vmtn" })
 
@@ -13,6 +15,7 @@ export default function RootLayout({ children }) {
   return (
     <html dir="rtl" lang="en">
       <body className={vazir.className}>
+        <ToastContainer />
         <Providers>
           {children}
         </Providers>

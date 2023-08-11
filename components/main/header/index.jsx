@@ -1,8 +1,10 @@
 "use client";
 import { useState } from "react";
 import { BookOpenIcon, LinkIcon, QuestionMarkCircleIcon, ArrowDownOnSquareIcon, XMarkIcon, Bars3Icon, ArrowRightOnRectangleIcon, ShoppingCartIcon } from '@heroicons/react/24/outline'
+import { KeyIcon, UserIcon } from "@heroicons/react/24/solid"
 import Link from "next/link";
-import { Badge, Button, IconButton } from "@material-tailwind/react";
+import { Button, IconButton, Menu, MenuHandler, MenuItem, MenuList } from "@material-tailwind/react";
+import useAuth from "@/hooks/useAuth";
 
 
 const links = [
@@ -49,6 +51,7 @@ const DesktopNav = ({ links }) => {
 }
 
 export default function Header() {
+    const auth = useAuth()
     const [isOpen, setIsOpen] = useState(false);
     const handleMenuClick = () => {
         setIsOpen(!isOpen);
@@ -58,18 +61,40 @@ export default function Header() {
         <header className="sticky top-0 start-0 end-0 px-3 bg-gray-50 shadow-md bg-base-100 z-30 py-4">
             <div className="flex justify-between items-center align-center max-w-7xl mx-auto">
                 <div className={`flex justify-around gap-2 ${isOpen ? "block" : ""}`}>
-                    <Badge content="6">
-                        <IconButton color="indigo" variant="outlined" size="lg" className="btn-flex">
-                            <ShoppingCartIcon className="w-7 h-7" />
-                        </IconButton>
-                    </Badge>
+                    <IconButton color="indigo" variant="outlined" size="lg" className="btn-flex">
+                        <ShoppingCartIcon className="w-7 h-7" />
+                    </IconButton>
 
-                    <Link href="/auth/login/">
-                        <Button color="indigo" className="font-fa btn-flex text-base rounded-full">
-                            <ArrowRightOnRectangleIcon className="w-6 h-6" />
-                            <span>ورود</span>
-                        </Button>
-                    </Link>
+
+
+                    {auth.loggedIn ? (
+                        <Menu>
+                            <MenuHandler>
+                                <Button variant="gradient" color="indigo" className="btn-flex">
+                                    <UserIcon className="w-6 h-6" />
+                                </Button>
+                            </MenuHandler>
+                            <MenuList dir="ltr" className="font-fa text-base">
+                                <MenuItem className="font-bold text-center"> {auth.profile.username} </MenuItem>
+                                <MenuItem className="flex justify-end items-center gap-1">
+                                    <div>حساب کاربری</div>
+                                    <UserIcon className="w-6 h-6" />
+                                </MenuItem>
+                                <MenuItem className="flex justify-end items-center gap-1 text-red-400 hover:!text-red-500">
+                                    <div>خروج</div>
+                                    <KeyIcon className="w-6 h-6" />
+                                </MenuItem>
+                            </MenuList>
+                        </Menu>
+                    ) : (
+                        <Link href="/auth/login/">
+                            <Button color="indigo" className="font-fa btn-flex text-base rounded-full">
+                                <ArrowRightOnRectangleIcon className="w-6 h-6" />
+                                <span>ورود</span>
+                            </Button>
+                        </Link>
+                    )}
+
                 </div>
 
                 <div className={`md:flex justify-around ${isOpen ? "flex" : "hidden"} w-auto`}>

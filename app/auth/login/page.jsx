@@ -1,10 +1,49 @@
 "use client";
 
+import ErrorControl from "@/components/core/form/error";
+import { TOAST_OPTIONS } from "@/constants/toast";
+import useAuth from "@/hooks/useAuth";
 import { AcademicCapIcon, ArrowRightIcon, BanknotesIcon } from "@heroicons/react/24/outline";
 import { Button, Card, CardBody, CardHeader, Checkbox, Typography, Input } from "@material-tailwind/react";
+import { useFormik } from "formik";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { toast } from "react-toastify";
+import * as Yup from "yup";
 
 export default function Login() {
+    const router = useRouter()
+    const auth = useAuth()
+    const formik = useFormik({
+        initialValues: {
+            username: "",
+            password: "",
+        },
+        validationSchema: Yup.object().shape({
+            username: Yup.string().required("نام کاربری اجباریست"),
+            password: Yup.string().required("رمز عبور اجباریست"),
+        }),
+        onSubmit: data => onLogin(data)
+    })
+
+    const onLogin = async data => {
+        try {
+            const result = await auth.Login(data)
+            if (result.success) {
+                router.push("/");
+                toast("خوش آمدید", { type: "success", ...TOAST_OPTIONS });
+            } else if (!result.success && result.code == 1) {
+                toast(result.message, { type: "error", ...TOAST_OPTIONS });
+            } else if (!result.success && result.code == 2) {
+                toast(result.message, { type: "warning", ...TOAST_OPTIONS });
+            } else {
+                toast(result.message, { type: "warning", ...TOAST_OPTIONS });
+            }
+        } catch(error) {
+            toast("خطایی رخ داد", { type: "warning", position: "top-center" });
+        }
+    }
+
     return (
         <div className="container mx-auto max-w-4xl h-screen w-full px-2 py-4 pb-20 flex flex-col justify-start lg:justify-center items-center">
             <div className="flex w-full pb-6">
@@ -15,7 +54,7 @@ export default function Login() {
                     </Button>
                 </Link>
             </div>
-            <Card className="w-full max-w-[24rem]">
+            <Card className="w-full max-w-md">
                 <CardHeader
                     color="indigo"
                     floated={false}
@@ -30,17 +69,23 @@ export default function Login() {
                     </Typography>
                 </CardHeader>
                 <CardBody>
-                    <form className="mt-8 mb-2">
+                    <form onSubmit={formik.handleSubmit} className="mt-8 mb-2">
                         <div dir="ltr" className="mb-4 flex flex-col gap-6">
-                            <Input color="indigo" size="lg" label="Username" />
-                            <Input color="indigo" type="password" size="lg" label="Password" />
+                            <div className="mb-2">
+                                <Input name="username" error={formik.errors.username && formik.touched.username} onChange={formik.handleChange} onBlur={formik.handleBlur} color="indigo" size="lg" label="Username" />
+                                <ErrorControl name="username" formik={formik} />
+                            </div>
+                            <div className="mb-2">
+                                <Input name="password" error={formik.errors.password && formik.touched.password} onChange={formik.handleChange} onBlur={formik.handleBlur} color="indigo" type="password" size="lg" label="Password" />
+                                <ErrorControl name="password" formik={formik} />
+                            </div>
                         </div>
                         <Checkbox
                             label={
                                 <Typography
                                     variant="small"
                                     color="gray"
-                                    className="flex items-center font-normal"
+                                    className="flex items-center font-normal font-fa"
                                 >
                                     من را بخاطر بسپار
                                 </Typography>
@@ -49,16 +94,16 @@ export default function Login() {
                             defaultChecked
                             containerProps={{ className: "-mr-2.5" }}
                         />
-                        <Button variant="gradient" color="indigo" className="font-fa text-base mt-6" fullWidth>
+                        <Button type="submit" variant="gradient" color="indigo" className="font-fa text-base mt-6" fullWidth>
                             ورود
                         </Button>
                         <Typography color="gray" className="mt-4 text-center font-normal font-fa">
-                            حساب کاربری دارید؟{" "}
+                            حساب کاربری ندارید؟{" "}
                             <a
                                 href="#"
                                 className="font-medium text-indigo-500 transition-colors hover:text-indigo-700"
                             >
-                                وارد شوید
+                                یکی بسازید
                             </a>
                         </Typography>
                     </form>

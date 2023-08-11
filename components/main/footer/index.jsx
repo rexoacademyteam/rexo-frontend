@@ -30,8 +30,8 @@ const links = [
 
 export default function Footer() {
     return (
-        <div>
-            <div className="bg-gray-100 rounded-tl-2xl rounded-tr-2xl h-auto hidden sm:flex sm:flex-row">
+        <div className="mt-10">
+            <div className="bg-white rounded-tl-2xl rounded-tr-2xl h-auto hidden sm:flex sm:flex-row">
                 <div className=" block md:flex md:justify-around md:align-middl container mx-auto pt-6 pb-6">
                     <div className="flex-col justify-around align-middle">
                         <div className="flex flex-col lg:flex-row justify-center items-center">
