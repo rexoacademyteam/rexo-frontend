@@ -15,8 +15,7 @@ export default function MainBanner() {
             ما کنارتون هستیم تا زمانی که به رویاهاتون برسید
           </h1>
           <h1 className="text-slate-500 m-auto text-lg md:text-xl text-center md:text-start">
-            آموزش هدفمند، پروژه محور و جامع برنامه نویسی همراه با پشتیبانی دائمی
-          </h1>
+            آموزش هدفمند، پروژه محور و جامع برنامه نویسی همراه با پشتیبانی دائمی</h1>
           <h1 className="text-slate-500 m-auto text-lg md:text-xl text-center md:text-start mb-4">
             با ما همراه باشید
           </h1>
