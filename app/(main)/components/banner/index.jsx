@@ -20,11 +20,11 @@ export default function MainBanner() {
             با ما همراه باشید
           </h1>
           <div className="flex flex-col md:flex-row items-stretch align-middle px-2 gap-4">
-            <Button size="lg" variant="gradient" color="indigo" className="flex-grow font-fa text-base btn-flex">
+            <Button size="md" variant="gradient" color="indigo" className="flex-grow font-fa text-base btn-flex">
               <ChatBubbleOvalLeftEllipsisIcon className="w-6 h-6" />
               مشاوره!
             </Button>
-            <Button size="lg" variant="outlined" color="indigo" className="flex-grow font-fa text-base border-2">
+            <Button size="md" variant="outlined" color="indigo" className="flex-grow font-fa text-base border-2">
               بزن بریم!
             </Button>
           </div>
@@ -32,7 +32,7 @@ export default function MainBanner() {
         <div className="relative">
           <img
             src="/assets/main_section_banner.png"
-            className="w-[400px] m-auto"
+            className="w-[500px] m-auto"
             alt="main-banner"
           />
         </div>
