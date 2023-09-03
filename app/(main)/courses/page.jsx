@@ -6,7 +6,9 @@ import {
   TabsBody,
   Tab,
   TabPanel,
+  Button,
 } from "@material-tailwind/react";
+
 
 export default function Page() {
   const data = [
@@ -56,14 +58,23 @@ export default function Page() {
         <TabsBody>
           {data.map(({ value, courses }) => (
             <TabPanel key={value} value={value}>
+              <div className="w-full flex justify-around align-middle">
               {courses && courses.map(({ image, title, price, href }) => (
-                <div className="flex-col justify-around align-middle" key={title}>
+                  <div className="flex-col justify-around align-middle rounded-md w-72 p-3 mt-10" key={title}>
                   <img src={image} alt="coursePic" className="w-full overflow-hidden" />
-                  <h1>{title}</h1>
+                  <div className="flex justify-between align-middle font-fa">
+                  <h1 className="font-bold">{title}</h1>
                   <p>{price}</p>
-                  <a href={href}>ثبت سفارش</a>
+                  </div>
+                  <a href={href}>
+                      <Button variant="gradient" color="indigo" className="font-fa text-base my-3 rounded-full w-full">
+                            ثبت سفارش
+                        </Button>
+                      </a>
                 </div>
+  
               ))}
+              </div>
             </TabPanel>
           ))}
         </TabsBody>

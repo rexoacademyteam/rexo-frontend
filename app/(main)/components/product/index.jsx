@@ -19,9 +19,9 @@ export default function ProductSection() {
     return (
         <div className="py-2 my-14">
             <div className="flex flex-col gap-8 container mx-auto px-2">
-                <ProductItem link="/courses/edit" scheme="blue" title="آموزش فوتوشاپ" thumbnail="/assets/products/photoshop.png" caption={texts.photoShop.caption} />
-                <ProductItem rev link="/courses/web" scheme="green" title="آموزش طراحی وبسایت" thumbnail="/assets/products/web.png" caption={texts.web.caption} />
-                <ProductItem link="/courses/game" scheme="rose" title="آموزش ساخت بازی" thumbnail="/assets/products/game.png" caption={texts.game.caption} />
+                <ProductItem link="/courses" scheme="blue" title="آموزش فوتوشاپ" thumbnail="/assets/products/photoshop.png" caption={texts.photoShop.caption} />
+                <ProductItem rev link="/courses" scheme="green" title="آموزش طراحی وبسایت" thumbnail="/assets/products/web.png" caption={texts.web.caption} />
+                <ProductItem link="/courses" scheme="rose" title="آموزش ساخت بازی" thumbnail="/assets/products/game.png" caption={texts.game.caption} />
             </div>
         </div>
     )
