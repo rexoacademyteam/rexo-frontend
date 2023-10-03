@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React from "react";
 import {
   Tabs,
@@ -9,7 +9,6 @@ import {
   Button,
 } from "@material-tailwind/react";
 
-
 export default function Page() {
   const data = [
     {
@@ -17,31 +16,43 @@ export default function Page() {
       value: "Web",
       courses: [
         {
-          image: "url-to-web-course-image",
+          image: "assets/HtmlCSSBanner.png",
           title: "طراحی وب ریسپانسیو",
-          price: 880000,
+          price: "880,000 تومان",
           href: "/webCourses/HtmlCssBootstrap",
+          teacher: "موسوی زاده",
         },
         {
-          image: "url-to-python-course-image",
+          image: "assets/pythonBanner.png",
           title: "پایتون",
-          price: 1880000,
+          price: "1,880,000 تومان",
           href: "/webCourses/python",
-        }
-      ]
+        },
+      ],
     },
     {
       label: "PhotoShop",
       value: "PhotoShop",
-      desc: `Because it's about motivating the doers. Because I'm here
-        to follow my dreams and inspire other people to follow their dreams, too.`,
+      courses: [
+        {
+          image: "assets/photoshopBanner.png",
+          title: "دوره متخصص فوتوشاپ",
+          price: "880,000 تومان",
+          href: "/photoshopCourses/photoshop",
+        },
+      ],
     },
     {
       label: "Game",
       value: "Game",
-      desc: `We're not always in the position that we want to be at.
-        We're constantly growing. We're constantly making mistakes. We're
-        constantly trying to express ourselves and actualize our dreams.`,
+      courses: [
+        {
+          image: "assets/gdevelopBanner.png",
+          title: "دوره مقدماتی بازی سازی",
+          price: "880,000 تومان",
+          href: "/gameCourses/gdevelop",
+        },
+      ],
     },
   ];
 
@@ -57,23 +68,35 @@ export default function Page() {
         </TabsHeader>
         <TabsBody>
           {data.map(({ value, courses }) => (
-            <TabPanel key={value} value={value}>
-              <div className="w-full flex justify-around align-middle">
-              {courses && courses.map(({ image, title, price, href }) => (
-                  <div className="flex-col justify-around align-middle rounded-md w-72 p-3 mt-10" key={title}>
-                  <img src={image} alt="coursePic" className="w-full overflow-hidden" />
-                  <div className="flex justify-between align-middle font-fa">
-                  <h1 className="font-bold">{title}</h1>
-                  <p>{price}</p>
-                  </div>
-                  <a href={href}>
-                      <Button variant="gradient" color="indigo" className="font-fa text-base my-3 rounded-full w-full">
-                            ثبت سفارش
-                        </Button>
-                      </a>
-                </div>
-  
-              ))}
+            <TabPanel key={value} value={value} className="mt-6">
+              <div className="w-full flex justify-around align-middle font-fa">
+                {courses &&
+                  courses.map(({ image, title, price, href, teacher }) => (
+                    <div
+                      className="flex-col justify-around align-middle rounded-3xl w-72 p-3 mt-10 bg-white"
+                      key={title}
+                    >
+                      <img
+                        src={image}
+                        alt="coursePic"
+                        className="w-full overflow-hidden -mt-14 mb-4"
+                      />
+                    <h1 className="font-bold mb-4 text-lg">{title}</h1>
+                    <div className="flex justify-between align-middle p-2">
+                    <p className="mb-2">مدرس : {teacher}</p>
+                      <a href={href} className="text-indigo-500 font-bold font-fa">مشاهده دوره</a></div> 
+                     <div className="flex">
+                     <Button
+                        variant="gradient"
+                        color="indigo"
+                        className="font-fa text-base my-3 rounded-full w-1/2"
+                      >
+                        ثبت سفارش
+                      </Button>
+                      <p className="m-auto">{price}</p>
+                     </div>
+                    </div>
+                  ))}
               </div>
             </TabPanel>
           ))}
