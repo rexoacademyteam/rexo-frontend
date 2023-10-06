@@ -27,6 +27,7 @@ export default function Page() {
           title: "پایتون",
           price: "1,880,000 تومان",
           href: "/webCourses/python",
+          teacher: "مقدمی"
         },
       ],
     },
@@ -39,6 +40,7 @@ export default function Page() {
           title: "دوره متخصص فوتوشاپ",
           price: "880,000 تومان",
           href: "/photoshopCourses/photoshop",
+          teacher: "شعبانی"
         },
       ],
     },
@@ -51,13 +53,14 @@ export default function Page() {
           title: "دوره مقدماتی بازی سازی",
           price: "880,000 تومان",
           href: "/gameCourses/gdevelop",
+          teacher: "اشرفی"
         },
       ],
     },
   ];
 
   return (
-    <div className="container mx-auto px-16 m-5">
+    <div className="mx-auto px-10 m-2">
       <Tabs id="custom-animation" value="Web">
         <TabsHeader>
           {data.map(({ label, value }) => (
@@ -69,17 +72,17 @@ export default function Page() {
         <TabsBody>
           {data.map(({ value, courses }) => (
             <TabPanel key={value} value={value} className="mt-6">
-              <div className="w-full flex justify-around align-middle font-fa">
+              <div className="w-full md:flex md:justify-around md:align-middle font-fa">
                 {courses &&
                   courses.map(({ image, title, price, href, teacher }) => (
                     <div
-                      className="flex-col justify-around align-middle rounded-3xl w-72 p-3 mt-10 bg-white"
+                      className="flex-col justify-around align-middle rounded-3xl md:w-72 p-3 md:mt-10 mt-20 mb-16 bg-white shadow-2xl hover:scale-105 transition-all"
                       key={title}
                     >
                       <img
                         src={image}
                         alt="coursePic"
-                        className="w-full overflow-hidden -mt-14 mb-4"
+                        className="w-full overflow-hidden -mt-16 mb-4 shadow-2xl rounded-3xl"
                       />
                     <h1 className="font-bold mb-4 text-lg">{title}</h1>
                     <div className="flex justify-between align-middle p-2">
