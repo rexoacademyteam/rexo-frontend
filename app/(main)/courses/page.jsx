@@ -8,6 +8,8 @@ import {
   TabPanel,
   Button,
 } from "@material-tailwind/react";
+import CourseCard from "./courseCard.jsx";
+
 
 export default function Page() {
   const data = [
@@ -60,46 +62,23 @@ export default function Page() {
   ];
 
   return (
-    <div className="mx-auto px-10 m-2">
+    <div className="mx-auto px-10 m-2 min-h-screen">
       <Tabs id="custom-animation" value="Web">
         <TabsHeader>
           {data.map(({ label, value }) => (
-            <Tab key={value} value={value}>
+            <Tab key={value} value={value} className="font-fa">
               {label}
             </Tab>
           ))}
         </TabsHeader>
         <TabsBody>
-          {data.map(({ value, courses }) => (
+          {data.map(({ value, courses }, pk) => (
             <TabPanel key={value} value={value} className="mt-6">
               <div className="w-full md:flex md:justify-around md:align-middle font-fa">
-                {courses &&
+                {courses ?
                   courses.map(({ image, title, price, href, teacher }) => (
-                    <div
-                      className="flex-col justify-around align-middle rounded-3xl md:w-72 p-3 md:mt-10 mt-20 mb-16 bg-white shadow-2xl hover:scale-105 transition-all"
-                      key={title}
-                    >
-                      <img
-                        src={image}
-                        alt="coursePic"
-                        className="w-full overflow-hidden -mt-16 mb-4 shadow-2xl rounded-3xl"
-                      />
-                    <h1 className="font-bold mb-4 text-lg">{title}</h1>
-                    <div className="flex justify-between align-middle p-2">
-                    <p className="mb-2">مدرس : {teacher}</p>
-                      <a href={href} className="text-indigo-500 font-bold font-fa">مشاهده دوره</a></div> 
-                     <div className="flex">
-                     <Button
-                        variant="gradient"
-                        color="indigo"
-                        className="font-fa text-base my-3 rounded-full w-1/2"
-                      >
-                        ثبت سفارش
-                      </Button>
-                      <p className="m-auto">{price}</p>
-                     </div>
-                    </div>
-                  ))}
+                    <CourseCard key={pk} title={title} href={href} price={price} image={image}  />
+                  )) : null}
               </div>
             </TabPanel>
           ))}

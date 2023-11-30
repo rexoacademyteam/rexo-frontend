@@ -1,10 +1,10 @@
 import '@/styles/globals.css'
+import '@/styles/font-face.css'
 import 'react-toastify/dist/ReactToastify.css'
 import Providers from '@/providers'
 import { Vazirmatn } from 'next/font/google'
 import { ToastContainer } from 'react-toastify'
 
-const vazir = Vazirmatn({ subsets: ['arabic', 'latin'], display: 'swap', variable: "vmtn" })
 
 export const metadata = {
   title: 'Rexo Academy',
@@ -14,7 +14,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html dir="rtl" lang="en">
-      <body className={vazir.className}>
+      <body>
         <ToastContainer />
         <Providers>
           {children}

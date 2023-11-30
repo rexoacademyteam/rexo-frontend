@@ -2,15 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
-.font-fa {
-    font-family: var(--font-vmtn)!important;
-}
 
 body, html {
     background-color: rgb(243, 244, 246);
+    font-family: Vazirmatn!important;
 }
 
 @layer components {
+    .font-fa {
+        font-family: Vazirmatn!important;
+    }
+
     .btn-flex {
         @apply flex justify-center items-center gap-2;
     }
@@ -18,4 +20,8 @@ body, html {
 
 .rtl {
     direction: rtl!important;
+}
+
+.font-fa {
+    font-family: Vazirmatn!important;
 }
