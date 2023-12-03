@@ -1,4 +1,5 @@
 "use client";
+import 'animate.css';
 
 import { ChatBubbleOvalLeftEllipsisIcon } from "@heroicons/react/24/outline";
 import { Button } from "@material-tailwind/react";
@@ -9,7 +10,7 @@ export default function MainBanner() {
       <div className="flex flex-col-reverse md:flex-row gap-4 justify-between container mx-auto">
         <div className="flex-col justify-around mt-9">
           <h1 className="text-2xl md:text-3xl font-extrabold mb-4 text-center md:text-start text-slate-800">
-            برنامه نویسی رو آسون یاد بگیر!
+            برنامه نویسی رو آسون یــــــــــــــاد بگیر!
           </h1>
           <h1 className="text-slate-500 m-auto text-lg md:text-xl text-center md:text-start">
             ما کنارتون هستیم تا زمانی که به رویاهاتون برسید
@@ -32,7 +33,7 @@ export default function MainBanner() {
         <div className="relative">
           <img
             src="/assets/main_section_banner.png"
-            className="w-[500px] m-auto"
+            className="w-[500px] m-auto movement-animation"
             alt="main-banner"
           />
         </div>

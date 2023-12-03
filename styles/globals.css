@@ -25,3 +25,10 @@ body, html {
 .font-fa {
     font-family: Vazirmatn!important;
 }
+.movement-animation{
+    animation: movement 4s ease-in-out infinite;
+}
+@keyframes movement {
+    0%, 100%{ transform: rotate(-3deg) translate(3px) }
+    50%{ transform: rotate(3deg) translate(-3px) }
+}

@@ -15,7 +15,7 @@ export default function ContactPage() {
             <div className="container mx-auto flex flex-wrap justify-center items-center w-9/12 gap-8 pt-8 pb-28 md:py-28">
                 {contactWays.map((contactWay, it) => (
                     <Link className="w-[200px]" href={contactWay.href ?? ""} key={it}>
-                        <div className="z-30 block w-full relative">
+                        <div className="z-30 block w-full relative movement-animation">
                             <div className="absolute top-0 bottom-0 start-0 end-0">
                                 <div className="-z-10 w-full h-full bg-gradient-to-r from-pink-300 via-purple-300 to-indigo-400 rounded-full blur-2xl opacity-70"></div>
                             </div>

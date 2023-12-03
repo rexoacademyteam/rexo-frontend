@@ -1,6 +1,6 @@
 const SpecialityItem = ({ title, icon }) => {
     return (
-        <div className="px-1 py-2 relative w-1/2 md:w-[14rem] z-20">
+        <div className="px-1 py-2 relative w-1/2 md:w-[14rem] z-20 movement-animation">
             <div
                 className="hover:rotate-6 transform transition duration-300 border-2 border-transparent w-4/5 mx-auto bg-white hover:shadow-lg hover:scale-105 hover:shadow-gray-300/50 cursor-pointer rounded-2xl flex flex-col
                   items-center justify-center py-6">
