@@ -31,7 +31,7 @@ export default function ProductItem({ thumbnail, title, caption, rev , link }) {
                             {caption}
                         </p>
                       <a href={link}>
-                      <Button variant="gradient" color="indigo" className="font-fa text-base mt-6 rounded-full">
+                      <Button variant="gradient" color="indigo" className="font-fa text-base mt-6 rounded-full w-full">
                             ثبت سفارش
                         </Button>
                       </a>

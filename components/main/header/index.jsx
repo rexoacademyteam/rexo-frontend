@@ -61,6 +61,7 @@ export default function Header() {
         <header className="sticky top-0 start-0 end-0 px-3 bg-gray-50 shadow-md bg-base-100 z-50 py-4">
             <div className="flex justify-between items-center align-center max-w-7xl mx-auto">
                 <div className={`flex justify-around gap-2 ${isOpen ? "block" : ""}`}>
+                    <span className="rounded-[100%] bg-red-600 text-white w-5 h-5 absolute -mt-2 -mr-40 z-50 text-center pb-1">{0}</span>
                     <IconButton color="indigo" variant="outlined" size="lg" className="btn-flex">
                         <ShoppingCartIcon className="w-7 h-7" />
                     </IconButton>
@@ -102,7 +103,7 @@ export default function Header() {
 
                 <div className="cursor-pointer flex items-center">
                     <Link href="/">
-                        <img src="/assets/brand_logo.png" className="hidden lg:block w-[80px]" alt="logo" />
+                        <img src="/assets/brand_logo.png" className="hidden lg:block w-[120px]" alt="logo" />
                         <img src="/assets/brand_purelogo.png" className="lg:hidden w-[50px] h-[30px]" alt="logo2" />
                     </Link>
                     <div className="lg:hidden ps-4 pt-1">

@@ -19,7 +19,7 @@ export default function Page() {
       courses: [
         {
           image: "assets/HtmlCSSBanner.png",
-          title: "طراحی وب ریسپانسیو",
+          title: "طراحی وب مقدماتی + Bootstrap",
           price: "880,000 تومان",
           href: "/webCourses/HtmlCssBootstrap",
           teacher: "موسوی زاده",
@@ -77,7 +77,7 @@ export default function Page() {
               <div className="w-full md:flex md:justify-around md:align-middle font-fa">
                 {courses ?
                   courses.map(({ image, title, price, href, teacher }) => (
-                    <CourseCard key={pk} title={title} href={href} price={price} image={image}  />
+                    <CourseCard key={pk} title={title} href={href} price={price} image={image} teacher={teacher} />
                   )) : null}
               </div>
             </TabPanel>
