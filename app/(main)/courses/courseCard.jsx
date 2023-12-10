@@ -9,7 +9,7 @@ import {
 
 export default function CourseCard({ key, title, image, price, teacher, href }) {
     return (
-        <div className="flex-col justify-around align-middle rounded-3xl md:w-72 p-3 md:mt-10 mt-20 mb-16 bg-white shadow-2xl hover:scale-105 transition-all"
+        <div className="flex-col justify-around align-middle rounded-3xl md:w-72 p-3 md:mt-10 mt-20 mb-16 bg-white shadow-2xl hover:scale-105 transition-all vertical-movement"
             key={title} >
                 <img
                 src={image}
