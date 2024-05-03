@@ -13,7 +13,7 @@ export default function MainBanner() {
             برنامه نویسی رو آسون یــــــــــــــــاد بگیر!
           </h1>
           <h1 className="text-slate-500 m-auto text-lg md:text-xl text-center md:text-start">
-            ما کنارتون هستیم تا زمانی که به رویاهاتون برسید
+            ما کنارتون هستیم تا زمانی که به رویــــــاهاتون برسید
           </h1>
           <h1 className="text-slate-500 m-auto text-lg md:text-xl text-center md:text-start">
             آموزش هدفمند، پروژه محور و جامع برنامه نویسی همراه با پشتیبانی دائمی</h1>
