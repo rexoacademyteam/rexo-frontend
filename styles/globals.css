@@ -39,3 +39,23 @@ body, html {
     0%, 100%{ transform: translateY(3px)}
     50%{ transform: translateY(-3px)}
 }
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+ 
+/* Track */
+::-webkit-scrollbar-track {
+    background: rgba(147, 149, 232, 0.492);
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgb(99,102,241);
+    border-radius: 3px;
+}
+ 
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
