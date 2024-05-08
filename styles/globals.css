@@ -57,5 +57,5 @@ body, html {
  
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background: #555;
+    box-shadow: rgba(68, 68, 135, 0.25) 0px 30px 60px -12px inset, rgba(33, 33, 33, 0.3) 0px 18px 36px -18px inset;;
 }
