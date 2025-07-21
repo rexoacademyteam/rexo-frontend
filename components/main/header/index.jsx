@@ -96,7 +96,7 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 start-0 end-0 px-3 bg-gray-50 shadow-md bg-base-100 z-50 py-4">
-      <div className="flex justify-between items-center align-center max-w-7xl mx-auto">
+      <div className="flex justify-between items-center align-center mx-auto">
         <div className={`flex justify-around gap-2 ${isOpen ? "block" : ""}`}>
           <span class="absolute top-1 right-1 flex h-5 w-5 z-50">
             <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-300 opacity-75"></span>

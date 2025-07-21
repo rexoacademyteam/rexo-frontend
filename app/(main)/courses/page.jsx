@@ -64,7 +64,7 @@ export default function Page() {
   return (
     <div className="mx-auto px-10 m-2 min-h-screen">
       <Tabs id="custom-animation" value="Web">
-        <TabsHeader>
+        <TabsHeader className="bg-indigo-500">
           {data.map(({ label, value }) => (
             <Tab key={value} value={value} className="font-fa">
               {label}
