@@ -9,6 +9,7 @@ import {
   Bars3Icon,
   ArrowRightOnRectangleIcon,
   ShoppingCartIcon,
+  UserGroupIcon,
 } from "@heroicons/react/24/outline";
 import { KeyIcon, UserIcon } from "@heroicons/react/24/solid";
 import Link from "next/link";
@@ -37,6 +38,11 @@ const links = [
     name: "ارتباط با ما",
     href: "/contact",
     logo: <LinkIcon className="w-6 h-6" />,
+  },
+  {
+    name: "رزومه اساتید",
+    href: "/resume",
+    logo: <UserGroupIcon className="w-6 h-6" />,
   },
   {
     name: "ثبت سفارش",
@@ -158,12 +164,12 @@ export default function Header() {
         <div className="cursor-pointer flex items-center">
           <Link href="/">
             <img
-              src="/assets/brand_logo.png"
+              src="/assets/MainPhotos/brand_logo.png"
               className="hidden lg:block w-[120px]"
               alt="logo"
             />
             <img
-              src="/assets/brand_purelogo.png"
+              src="/assets/MainPhotos/brand_purelogo.png"
               className="lg:hidden w-[50px] h-[30px]"
               alt="logo2"
             />

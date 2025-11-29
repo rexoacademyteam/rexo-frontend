@@ -18,14 +18,14 @@ export default function Page() {
       value: "Web",
       courses: [
         {
-          image: "assets/HtmlCSSBanner.png",
+          image: "assets/Courses/HtmlCSSBanner.png",
           title: "طراحی وب مقدماتی + Bootstrap",
           price: "880,000 تومان",
           href: "/webCourses/HtmlCssBootstrap",
           teacher: "موسوی زاده",
         },
         {
-          image: "assets/pythonBanner.png",
+          image: "assets/Courses/pythonBanner.png",
           title: "پایتون",
           price: "1,880,000 تومان",
           href: "/webCourses/python",
@@ -38,7 +38,7 @@ export default function Page() {
       value: "PhotoShop",
       courses: [
         {
-          image: "assets/photoshopBanner.png",
+          image: "assets/Courses/photoshopBanner.png",
           title: "دوره متخصص فوتوشاپ",
           price: "880,000 تومان",
           href: "/photoshopCourses/photoshop",
@@ -51,7 +51,7 @@ export default function Page() {
       value: "Game",
       courses: [
         {
-          image: "assets/gdevelopBanner.png",
+          image: "assets/Courses/gdevelopBanner.png",
           title: "دوره مقدماتی بازی سازی",
           price: "880,000 تومان",
           href: "/gameCourses/gdevelop",

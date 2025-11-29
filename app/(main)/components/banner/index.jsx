@@ -32,7 +32,7 @@ export default function MainBanner() {
         </div>
         <div className="relative">
           <img
-            src="/assets/main_section_banner.png"
+            src="/assets/MainPhotos/main_section_banner.png"
             className="w-[500px] m-auto movement-animation"
             alt="main-banner"
           />

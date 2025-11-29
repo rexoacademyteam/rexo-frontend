@@ -1,6 +1,6 @@
 "use client";
 
-import { BookOpenIcon, LinkIcon, QuestionMarkCircleIcon, ArrowDownOnSquareIcon, ChevronDoubleUpIcon, } from "@heroicons/react/24/outline";
+import { BookOpenIcon, LinkIcon, QuestionMarkCircleIcon, ArrowDownOnSquareIcon, ChevronDoubleUpIcon, UserGroupIcon} from "@heroicons/react/24/outline";
 
 
 const clickHandler = () => {
@@ -22,6 +22,11 @@ const links = [
     },
     { name: "ارتباط با ما", href: "contact", logo: <LinkIcon className="w-6 h-6" /> },
     {
+    name: "رزومه اساتید",
+    href: "/resume",
+    logo: <UserGroupIcon className="w-6 h-6" />,
+  },
+    {
         name: "ثبت سفارش",
         href: "ordering",
         logo: <ArrowDownOnSquareIcon className="w-6 h-6" />,
@@ -37,7 +42,7 @@ export default function Footer() {
                         <div className="flex flex-col lg:flex-row justify-center items-center">
                             <div className="mr-3">
                                 <img
-                                    src="assets/brand_logo.png"
+                                    src="assets/MainPhotos/brand_logo.png"
                                     alt="brand-logo"
                                     className="w-28 h-16"
                                 />

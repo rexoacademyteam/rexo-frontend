@@ -3,7 +3,7 @@ export default function Page() {
         <>
             <div className="container mx-auto my-10">
                 <h1 className="text-center text-xl md:text-3xl text-gray-700 font-bold my-6">شاید براتون سوال شده باشه چرا رکسو؟</h1>
-                <img src="./assets/AboutUs.png" alt="About-us" className="p-8 m-auto mb-7 w-[80%]" />
+                <img src="./assets/MainPhotos/AboutUs.png" alt="About-us" className="p-8 m-auto mb-7 w-[80%]" />
                 <h2 className="text-lg font-bold text-[#ff0000] mt-5 mb-1">Resourceful</h2>
                 <h1 className="">به معنای کاردان خوش فکر، مبتکر که همیشه سعی ما بر این بوده در صورتی در زمینه ای ادعا کنیم که در آن به توانایی کامل رسیده باشیم و تلاش به پیشرفت را سرلوحه خود قرار دهیم. با ذهنیتی مبتکر و متفکر پا به این عرصه قرار دادیم تا تحولی شگرف در زمینه بهبود دانش الکترونیک و کامپیوتری کشور برداریم.</h1>
                 <h2 className="text-lg font-bold text-[#0000ff] mt-4 mb-1">Educational</h2>

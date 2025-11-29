@@ -1,12 +1,12 @@
 import Link from "next/link";
 
 const contactWays = [
-    { image: "assets/instagram.png", title: "اینستاگرام", href: "" },
-    { image: "assets/youtube.png", title: "یوتیوب", href: "", },
-    { image: "assets/telegram.png", title: "کانال تلگرام", href: "" },
-    { image: "assets/github.png", title: "گیت هاب", href: "" },
-    { image: "assets/call.png", title: "تماس", href: "" },
-    { image: "assets/gmail.png", title: "ایمیل", href: "" },
+    { image: "assets/MainPhotos/instagram.png", title: "اینستاگرام", href: "" },
+    { image: "assets/MainPhotos/youtube.png", title: "یوتیوب", href: "", },
+    { image: "assets/MainPhotos/telegram.png", title: "کانال تلگرام", href: "" },
+    { image: "assets/MainPhotos/github.png", title: "گیت هاب", href: "" },
+    { image: "assets/MainPhotos/call.png", title: "تماس", href: "" },
+    { image: "assets/MainPhotos/gmail.png", title: "ایمیل", href: "" },
 ];
 
 export default function ContactPage() {
